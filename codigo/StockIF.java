@@ -2,15 +2,28 @@ package es.uned.lsi.eped.pract2022_2023;
 
 import es.uned.lsi.eped.DataStructures.SequenceIF;
 
-/* Representa un Stock en el que se indexan valores enteros
+/**
+ * Representa un Stock en el que se indexan valores enteros
  * bajo un indice formado por una cadena de caracteres
+ * -----EXOLICACION DE LA CLASE -----
+ * - Desde esta clase definimos un conjunto de metodos
+ * que pueden ser implementados por cualquier clase que represente un Stock
+ * 
+ * --> public int retrieveStock(String p);
+ * --> updateStock(String p, int u)
+ * --> listStock(String prefix)
  */
 public interface StockIF {
 
-	/* Devuelve el valor indexado bajo el indice p.
-     * @PRE: p != ""
+	/** Devuelve el valor indexado bajo el indice p.
+     * @PRE: p != "" 
+	 * ------> esta anotacion significa que se espera que el argumento "p"
+	 * 			sea una cadena no vacia, que tenga al menos un caracter 
+	 * ------> Anotacion como restriccion previa que indica que la operacion
+	 * 			solo puede ejecutarse si se cumple esta condicion.
      * Si no existe un valor indexado bajo el indice p,
      * devuelve el valor -1.
+	 * 
      */
 	public int retrieveStock(String p);
   
